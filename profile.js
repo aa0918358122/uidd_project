@@ -17,26 +17,27 @@ $(document).ready(function() {
   })
   $('#question .more').click(function() {
     $('#question .more').hide();
-    $('#question .content').toggleClass('content_transform');
+    $('#question .content').toggleClass('content_back', false);
+    $('#question .content').toggleClass('content_transform', true);
     $('#question .close').show();
   })
   $('#question .close').click(function() {
     $('#question .close').hide();
-    $('#question .content').toggleClass('content_back');
+    $('#question .content').toggleClass('content_transform', false);
+    $('#question .content').toggleClass('content_back', true);
     $('#question .more').show();
   })
   $('#answer .more').click(function() {
     $('#answer .more').hide();
-    $('#answer .content').toggleClass('content_transform');
+    $('#answer .content').toggleClass('content_back', false);
+    $('#answer .content').toggleClass('content_transform', true);
     $('#answer .close').show();
   })
   $('#answer .close').click(function() {
     $('#answer .close').hide();
-    $('#answer .content').toggleClass('content_back');
+    $('#answer .content').toggleClass('content_transform', false);
+    $('#answer .content').toggleClass('content_back', true);
     $('#answer .more').show();
-  })
-  $('#add_in').click(function() {
-    $('#question_box').animate({bottom: 0}, 500);
   })
 });
 
@@ -94,6 +95,14 @@ var animItem = bodymovin.loadAnimation({
   animType: 'svg',
   loop: true,
   path: 'https://assets3.lottiefiles.com/packages/lf20_zezidsfk.json'
+});
+
+var cat = document.getElementById('cat');
+var animItem = bodymovin.loadAnimation({
+  wrapper: cat,
+  animType: 'svg',
+  loop: true,
+  path: 'https://assets7.lottiefiles.com/packages/lf20_z9ed2jna.json'
 });
 
 $("#Tiger").hover(function() {

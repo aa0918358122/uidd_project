@@ -1,0 +1,271 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.borderbox {
+  box-sizing: border-box;
+}
+
+#title {
+  background-color: #D9E5FF;
+  width: 100vw;
+  height: 10vh;
+  justify-content: space-between;
+}
+
+
+#octopus {
+  width: 15vh;
+  height: 15vh;
+  margin-top: -2.5vh;
+}
+
+
+#circle {
+  height: 6vh;
+  width: 6vh;
+  background-color: white;
+  border-radius: 50%;
+  margin: auto 3vw auto 5vw;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.8vh 0;
+}
+
+.line {
+  width: 2.5vh;
+  height: 0.4vh;
+  background-color: #7874CD;
+  border-radius: 20%;
+}
+
+.word {
+  font-size: 3vh;
+  font-weight: bold;
+  margin-top: 4vh;
+}
+
+#question {
+  width: 100vw;
+  height: auto;
+  border-bottom: 0.5vh dashed #7874CD;
+  padding: 3vh 3vh 4vh 2vh;
+}
+
+.two {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.one {
+  justify-content: flex-start;
+}
+
+.circle {
+  width: 13vh;
+  height: 13vh;
+  background-color: #D9E5EF;
+  border-radius: 50%;
+  padding: 1.5vh;
+}
+
+#dog {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+}
+
+.follow {
+  color: #7874CD;
+  background-color: #FFD4EB;
+  border: none;
+  border-radius: 5px;
+  font-size: 2vh;
+  padding: 0.5vh 2vw;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.cap {
+  font-size: 4vh;
+  font-weight: bold;
+  margin: auto 4vh auto 3vh;
+}
+
+.cap_a {
+  font-size: 4vh;
+  font-weight: bold;
+  margin-top: -2vh;
+}
+
+.extra {
+  flex-grow: 2;
+}
+
+.more {
+  position: absolute;
+  right: 1vw;
+  text-decoration:underline;
+  font-weight: bold;
+  font-size: 1.5vh;
+}
+
+.close {
+  display: inline;
+  margin-left: 3vw;
+  text-decoration:underline;
+  font-size: 1.5vh;
+  font-weight: bold;
+}
+
+.close:hover, .more:hover {
+  color: #7874CD;
+  cursor: pointer;
+}
+
+.topic {
+  font-size: 2vh;
+  font-weight: bold;
+  width: 100%;
+}
+
+.topic_a {
+  font-size: 2vh;
+  font-weight: bold;
+  margin: -0.5vh 0 0 3vw;
+}
+
+.content {
+  font-size: 2vh;
+  flex-grow: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+}
+
+.transform {
+  -webkit-transition: 1s;
+}
+
+.content_transform {
+  -webkit-line-clamp: 100;
+}
+
+.content_back {
+  -webkit-line-clamp: 4;
+}
+
+.ratings {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  color: #ddd;
+  overflow: hidden;
+  font-size: 3vh;
+  margin: -1vh 0 0 3vw;
+}
+
+.full_star {
+  width: 80%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ED8421;
+}
+
+#answer {
+  width: 100vw;
+  height: auto;
+  border-bottom: 0.5vh dashed #FFD4E8;
+  justify-content: flex-start;
+  padding: 4vh 2vh;
+}
+
+#more_answer {
+  width: 100vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2vh;
+}
+
+.ans {
+  padding-top: 2vh;
+  font-size: 2vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: 0.4vh dashed #D9E5EF;
+}
+
+#button_page {
+  width: 80vw;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: -80vw;
+  flex-direction: column;
+  padding: 7vh 8vw;
+  border-radius: 0 30px 30px 0;
+}
+
+.button {
+  color: #7874CD;
+  background-color: #FFD4EB;
+  border: none;
+  border-radius: 5px;
+  font-size: 2vh;
+  padding: 1.5vh 2vw;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+#return {
+  border: 0.3vh solid #7874CD;
+  border-radius: 50%;
+  width: 4vh;
+  height: 4vh;
+}
+
+.arrow {
+  border: solid #7874CD;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 0.5vh;
+  margin: 1vh;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.add_answer {
+  width: 12vh;
+  color: #7874CD;
+  background-color: #FFD4EB;
+  border: none;
+  border-radius: 5px;
+  font-size: 2vh;
+  padding: 0.5vh 0;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2vh;
+  position: absolute;
+  right: 3vw;
+}
