@@ -85,7 +85,56 @@ $(document).ready(function() {
       $('#s').css('background-color', '#ddd');
     }
   })
+  $('#more_question').on('swipeleft', function(){
+    $('#more_answer').css('position', 'absolute');
+    $('#more_question').css('position', 'fixed');
+    $('#save').css('position', 'fixed');
+    $('#more_question').animate({left: "-100vw"}, 200);
+    $('#more_answer').animate({left: 0}, 200);
+    $('#save').animate({left: "100vw"}, 200);
+    $('#q').css('background-color', 'white');
+    $('#s').css('background-color', 'white');
+    $('#a').css('background-color', '#ddd');
+  })
+  $('#more_answer').on('swipeleft', function(){
+    $('#save').css('position', 'absolute');
+    $('#more_answer').css('position', 'fixed');
+    $('#more_question').css('position', 'fixed');
+    $('#more_answer').animate({left: "-100vw"}, 200);
+    $('#more_question').animate({left: "-100vw"}, 200);
+    $('#save').animate({left: 0}, 200);
+    $('#a').css('background-color', 'white');
+    $('#q').css('background-color', 'white');
+    $('#s').css('background-color', '#ddd');
+
+  })
+  $('#more_answer').on('swiperight', function(){
+    $('#more_question').css('position', 'absolute');
+    $('#more_answer').css('position', 'fixed');
+    $('#save').css('position', 'fixed');
+    $('#save').animate({left: "100vw"}, 200);
+    $('#more_answer').animate({left: "100vw"}, 200);
+    $('#more_question').animate({left: 0}, 200);
+    $('#a').css('background-color', 'white');
+    $('#s').css('background-color', 'white');
+    $('#q').css('background-color', '#ddd');
+  })
+  $('#save').on('swiperight', function(){
+    $('#more_answer').css('position', 'absolute');
+    $('#more_question').css('position', 'fixed');
+    $('#save').css('position', 'fixed');
+    $('#save').animate({left: "100vw"}, 200);
+    $('#more_answer').animate({left: 0}, 200);
+    $('#more_question').animate({left: "-100vw"}, 200);
+    $('#q').css('background-color', 'white');
+    $('#s').css('background-color', 'white');
+    $('#a').css('background-color', '#ddd');
+
+  })
+  
+
 });
+
 
 var tiger = document.getElementById('tiger');
 var animItem = bodymovin.loadAnimation({
