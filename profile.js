@@ -23,12 +23,14 @@ $(document).ready(function() {
   $('#more_answer').css('top', height);
   $('#save').css('top', height);
   $('#a').click(function() {
-    $('#more_answer').css('position', 'absolute');
+  
     $('#more_question').css('position', 'fixed');
     $('#save').css('position', 'fixed');
     if($('#q').css('background-color', '#ddd')) {
       $('#more_question').animate({left: "-100vw"}, 200);
-      $('#more_answer').animate({left: 0}, 200);
+      $('#more_answer').animate({left: 0}, 200, function(){
+        $('#more_answer').css('position', 'absolute');
+      });
       $('#save').animate({left: "100vw"}, 200);
       $('#q').css('background-color', 'white');
       $('#s').css('background-color', 'white');
@@ -36,7 +38,9 @@ $(document).ready(function() {
     }
     else if($('#s').css('background-color', '#ddd')) {
       $('#save').animate({left: "100vw"}, 200);
-      $('#more_answer').animate({left: 0}, 200);
+      $('#more_answer').animate({left: 0}, 200, function(){
+        $('#more_answer').css('position', 'absolute');
+      });
       $('#more_question').animate({left: "-100vw"}, 200);
       $('#q').css('background-color', 'white');
       $('#s').css('background-color', 'white');
@@ -44,13 +48,15 @@ $(document).ready(function() {
     }
   })
   $('#q').click(function() {
-    $('#more_question').css('position', 'absolute');
+    
     $('#more_answer').css('position', 'fixed');
     $('#save').css('position', 'fixed');
     if($('#a').css('background-color', '#ddd')) {
       $('#save').animate({left: "100vw"}, 200);
       $('#more_answer').animate({left: "100vw"}, 200);
-      $('#more_question').animate({left: 0}, 200);
+      $('#more_question').animate({left: 0}, 200,function(){
+        $('#more_question').css('position', 'absolute');
+      });
       $('#a').css('background-color', 'white');
       $('#s').css('background-color', 'white');
       $('#q').css('background-color', '#ddd');
@@ -58,20 +64,24 @@ $(document).ready(function() {
     else if($('#s').css('background-color', '#ddd')) {
       $('#save').animate({left: "100vw"}, 200);
       $('#more_answer').animate({left: "100vw"}, 200);
-      $('#more_question').animate({left: 0}, 200);
+      $('#more_question').animate({left: 0}, 200,function(){
+        $('#more_question').css('position', 'absolute');
+      });
       $('#s').css('background-color', 'white');
       $('#a').css('background-color', 'white');
       $('#q').css('background-color', '#ddd');
     }
   })
   $('#s').click(function() {
-    $('#save').css('position', 'absolute');
+   
     $('#more_answer').css('position', 'fixed');
     $('#more_question').css('position', 'fixed');
     if($('#q').css('background-color', '#ddd')) {
       $('#more_question').animate({left: "-100vw"}, 200);
       $('#more_answer').animate({left: "-100vw"}, 200);
-      $('#save').animate({left: 0}, 200);
+      $('#save').animate({left: 0}, 200,function(){
+        $('#save').css('position', 'absolute');
+      });
       $('#q').css('background-color', 'white');
       $('#a').css('background-color', 'white');
       $('#s').css('background-color', '#ddd');
@@ -79,30 +89,37 @@ $(document).ready(function() {
     else if($('#a').css('background-color', '#ddd')) {
       $('#more_answer').animate({left: "-100vw"}, 200);
       $('#more_question').animate({left: "-100vw"}, 200);
-      $('#save').animate({left: 0}, 200);
+      $('#save').animate({left: 0}, 200, function(){
+        $('#save').css('position', 'absolute');
+      });
       $('#a').css('background-color', 'white');
       $('#q').css('background-color', 'white');
       $('#s').css('background-color', '#ddd');
     }
   })
   $('#more_question').on('swipeleft', function(){
-    $('#more_answer').css('position', 'absolute');
+
     $('#more_question').css('position', 'fixed');
     $('#save').css('position', 'fixed');
     $('#more_question').animate({left: "-100vw"}, 200);
     $('#more_answer').animate({left: 0}, 200);
-    $('#save').animate({left: "100vw"}, 200);
+    $('#save').animate({left: "100vw"}, 200,function(){
+      $('#more_answer').css('position', 'absolute');
+    });
     $('#q').css('background-color', 'white');
     $('#s').css('background-color', 'white');
     $('#a').css('background-color', '#ddd');
   })
   $('#more_answer').on('swipeleft', function(){
-    $('#save').css('position', 'absolute');
+  
     $('#more_answer').css('position', 'fixed');
     $('#more_question').css('position', 'fixed');
     $('#more_answer').animate({left: "-100vw"}, 200);
     $('#more_question').animate({left: "-100vw"}, 200);
-    $('#save').animate({left: 0}, 200);
+    $('#save').animate({left: 0}, 200,function(){
+      $('#save').css('position', 'absolute');
+    });
+   
     $('#a').css('background-color', 'white');
     $('#q').css('background-color', 'white');
     $('#s').css('background-color', '#ddd');
