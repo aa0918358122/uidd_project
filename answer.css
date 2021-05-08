@@ -39,13 +39,10 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 1.8vh 0;
-}
-
-.line {
-  width: 2.5vh;
-  height: 0.4vh;
-  background-color: #7874CD;
-  border-radius: 20%;
+  font-size: 4vh;
+  font-weight: bold;
+  color: #7874CD;
+  transform: rotateY(180deg);
 }
 
 .word {
@@ -120,6 +117,7 @@ body {
   text-decoration:underline;
   font-weight: bold;
   font-size: 1.5vh;
+  margin-top: 1vh;
 }
 
 .close {
@@ -175,7 +173,7 @@ body {
   color: #ddd;
   overflow: hidden;
   font-size: 3vh;
-  margin: -1vh 0 0 3vw;
+  margin: -1.5vh 0 0 3vw;
 }
 
 .full_star {
@@ -233,26 +231,6 @@ body {
   font-weight: bold;
   text-align: center;
   margin-top: 4vh;
-}
-
-#return {
-  border: 0.3vh solid #7874CD;
-  border-radius: 50%;
-  width: 4vh;
-  height: 4vh;
-}
-
-.arrow {
-  border: solid #7874CD;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 0.5vh;
-  margin: 1vh;
-}
-
-.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
 }
 
 .add_answer {

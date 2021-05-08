@@ -21,6 +21,7 @@ body {
   justify-content: flex-start;
   position: fixed;
   top: 0;
+  z-index: 5;
 }
 
 #down {
@@ -30,12 +31,13 @@ body {
   justify-content: space-between;
   position: fixed;
   bottom: 0;
+  z-index: 5;
 }
 
 .down_button {
   color: #7874CD;
   font-weight: bold;
-  font-size: 2vh;
+  font-size: 3vh;
   width: 30vw;
   text-align: center;
   margin: auto;
@@ -64,7 +66,6 @@ body {
   justify-content: flex-start;
   position: relative;
   top: 10vh;
-  z-index: -1;
 }
 
 .ans {
@@ -83,7 +84,6 @@ body {
   border-top: 0.4vh dashed #7874CD;
   position: relative;
   top: 10vh;
-  z-index: -1;
 }
 
 .input {
@@ -128,7 +128,6 @@ body {
   font-size: 2.5vh;
   position: relative;
   top: 10vh;
-  z-index: -1;
 }
 
 .subject {
@@ -172,7 +171,7 @@ body {
   font-weight: bolder;
   color: #7874CD;
   text-align: center;
-  margin-top: -2.3vh;
+  margin-top: -1.3vh;
 }
 
 #question_box {
@@ -181,6 +180,7 @@ body {
   background-color: #D9E5FF;
   position: fixed;
   bottom: -25vh;
+  z-index: 6;
 }
 
 #add_question {
@@ -199,7 +199,7 @@ body {
 }
 
 .add_detail {
-  font-size: 1.5vh;
+  font-size: 2vh;
   font-weight: bold;
   padding: 0.5vh 1vh;
   background-color: #FFD4EB;
@@ -209,3 +209,17 @@ body {
   right: 3vh;
 }
 
+.return {
+  font-size: 2vh;
+  font-weight: bold;
+  padding: 0.5vh 1vh;
+  background-color: #FFD4EB;
+  color: #7874CD;
+  border-radius: 8px;
+  position: absolute;
+  right: 20vh;
+}
+
+.ans:hover {
+  background-color: #ddd;
+}

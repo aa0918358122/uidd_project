@@ -1,19 +1,5 @@
 $(document).ready(function() {
   $('#circle').click(function() {
-    $('#button_page').animate({left: 0}, 500);
-    $('#title').css("opacity", 0.5);
-    $('#question').css("opacity", 0.5);
-    $('#answer').css("opacity", 0.5);
-    $('#more_answer').css("opacity", 0.5);
-    $('#ask_question').css("opacity", 0.5);
-  })
-  $('#return').click(function() {
-    $('#button_page').animate({left: "-80vw"}, 500);
-    $('#title').css("opacity", 1);
-    $('#question').css("opacity", 1);
-    $('#answer').css("opacity", 1);
-    $('#more_answer').css("opacity", 1);
-    $('#ask_question').css("opacity", 1);
   })
   $('#question .more').click(function() {
     $('#question .more').hide();

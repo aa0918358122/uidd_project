@@ -1,43 +1,89 @@
 $(document).ready(function() {
   $('#circle').click(function() {
-    $('#button_page').animate({left: 0}, 500);
-    $('#title').css("opacity", 0.5);
-    $('#question').css("opacity", 0.5);
-    $('#answer').css("opacity", 0.5);
-    $('#more_answer').css("opacity", 0.5);
-    $('#ask_question').css("opacity", 0.5);
+    $('#button_page').animate({left: "20vw"}, 300);
+    $('#title').css('opacity', 0.5);
+    $('#intro').css('opacity', 0.5);
+    $('#switch').css('opacity', 0.5);
+    $('#more_question').css('opacity', 0.5);
+    $('#more_answer').css('opacity', 0.5);
+    $('#save').css('opacity', 0.5);
+    $('#down').css('opacity', 0.5);
   })
   $('#return').click(function() {
-    $('#button_page').animate({left: "-80vw"}, 500);
-    $('#title').css("opacity", 1);
-    $('#question').css("opacity", 1);
-    $('#answer').css("opacity", 1);
-    $('#more_answer').css("opacity", 1);
-    $('#ask_question').css("opacity", 1);
+    $('#button_page').animate({left: "100vw"}, 300);
+    $('#title').css('opacity', 1);
+    $('#intro').css('opacity', 1);
+    $('#switch').css('opacity', 1);
+    $('#more_question').css('opacity', 1);
+    $('#more_answer').css('opacity', 1);
+    $('#save').css('opacity', 1);
+    $('#down').css('opacity', 1);
   })
-  $('#question .more').click(function() {
-    $('#question .more').hide();
-    $('#question .content').toggleClass('content_back', false);
-    $('#question .content').toggleClass('content_transform', true);
-    $('#question .close').show();
+  var height = $("#more_question").offset().top;
+  $('#more_answer').css('top', height);
+  $('#save').css('top', height);
+  $('#a').click(function() {
+    $('#more_answer').css('position', 'absolute');
+    $('#more_question').css('position', 'fixed');
+    $('#save').css('position', 'fixed');
+    if($('#q').css('background-color', '#ddd')) {
+      $('#more_question').animate({left: "-100vw"}, 200);
+      $('#more_answer').animate({left: 0}, 200);
+      $('#save').animate({left: "100vw"}, 200);
+      $('#q').css('background-color', 'white');
+      $('#s').css('background-color', 'white');
+      $('#a').css('background-color', '#ddd');
+    }
+    else if($('#s').css('background-color', '#ddd')) {
+      $('#save').animate({left: "100vw"}, 200);
+      $('#more_answer').animate({left: 0}, 200);
+      $('#more_question').animate({left: "-100vw"}, 200);
+      $('#q').css('background-color', 'white');
+      $('#s').css('background-color', 'white');
+      $('#a').css('background-color', '#ddd');
+    }
   })
-  $('#question .close').click(function() {
-    $('#question .close').hide();
-    $('#question .content').toggleClass('content_transform', false);
-    $('#question .content').toggleClass('content_back', true);
-    $('#question .more').show();
+  $('#q').click(function() {
+    $('#more_question').css('position', 'absolute');
+    $('#more_answer').css('position', 'fixed');
+    $('#save').css('position', 'fixed');
+    if($('#a').css('background-color', '#ddd')) {
+      $('#save').animate({left: "100vw"}, 200);
+      $('#more_answer').animate({left: "100vw"}, 200);
+      $('#more_question').animate({left: 0}, 200);
+      $('#a').css('background-color', 'white');
+      $('#s').css('background-color', 'white');
+      $('#q').css('background-color', '#ddd');
+    }
+    else if($('#s').css('background-color', '#ddd')) {
+      $('#save').animate({left: "100vw"}, 200);
+      $('#more_answer').animate({left: "100vw"}, 200);
+      $('#more_question').animate({left: 0}, 200);
+      $('#s').css('background-color', 'white');
+      $('#a').css('background-color', 'white');
+      $('#q').css('background-color', '#ddd');
+    }
   })
-  $('#answer .more').click(function() {
-    $('#answer .more').hide();
-    $('#answer .content').toggleClass('content_back', false);
-    $('#answer .content').toggleClass('content_transform', true);
-    $('#answer .close').show();
-  })
-  $('#answer .close').click(function() {
-    $('#answer .close').hide();
-    $('#answer .content').toggleClass('content_transform', false);
-    $('#answer .content').toggleClass('content_back', true);
-    $('#answer .more').show();
+  $('#s').click(function() {
+    $('#save').css('position', 'absolute');
+    $('#more_answer').css('position', 'fixed');
+    $('#more_question').css('position', 'fixed');
+    if($('#q').css('background-color', '#ddd')) {
+      $('#more_question').animate({left: "-100vw"}, 200);
+      $('#more_answer').animate({left: "-100vw"}, 200);
+      $('#save').animate({left: 0}, 200);
+      $('#q').css('background-color', 'white');
+      $('#a').css('background-color', 'white');
+      $('#s').css('background-color', '#ddd');
+    }
+    else if($('#a').css('background-color', '#ddd')) {
+      $('#more_answer').animate({left: "-100vw"}, 200);
+      $('#more_question').animate({left: "-100vw"}, 200);
+      $('#save').animate({left: 0}, 200);
+      $('#a').css('background-color', 'white');
+      $('#q').css('background-color', 'white');
+      $('#s').css('background-color', '#ddd');
+    }
   })
 });
 
