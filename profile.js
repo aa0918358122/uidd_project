@@ -23,13 +23,14 @@ $(document).ready(function() {
   $('#more_answer').css('top', height);
   $('#save').css('top', height);
   $('#a').click(function() {
-  
+    var scrollval = $(window).scrollTop;
     $('#more_question').css('position', 'fixed');
     $('#save').css('position', 'fixed');
     if($('#q').css('background-color', '#ddd')) {
       $('#more_question').animate({left: "-100vw"}, 200);
       $('#more_answer').animate({left: 0}, 200, function(){
         $('#more_answer').css('position', 'absolute');
+        $(window).animate({scrollTop:scrollval});
       });
       $('#save').animate({left: "100vw"}, 200);
       $('#q').css('background-color', 'white');
@@ -40,6 +41,7 @@ $(document).ready(function() {
       $('#save').animate({left: "100vw"}, 200);
       $('#more_answer').animate({left: 0}, 200, function(){
         $('#more_answer').css('position', 'absolute');
+        $(window).animate({scrollTop:scrollval});
       });
       $('#more_question').animate({left: "-100vw"}, 200);
       $('#q').css('background-color', 'white');
@@ -48,7 +50,7 @@ $(document).ready(function() {
     }
   })
   $('#q').click(function() {
-    
+    var scrollval = $(window).scrollTop;
     $('#more_answer').css('position', 'fixed');
     $('#save').css('position', 'fixed');
     if($('#a').css('background-color', '#ddd')) {
@@ -56,6 +58,7 @@ $(document).ready(function() {
       $('#more_answer').animate({left: "100vw"}, 200);
       $('#more_question').animate({left: 0}, 200,function(){
         $('#more_question').css('position', 'absolute');
+        $(window).animate({scrollTop:scrollval});
       });
       $('#a').css('background-color', 'white');
       $('#s').css('background-color', 'white');
@@ -66,14 +69,19 @@ $(document).ready(function() {
       $('#more_answer').animate({left: "100vw"}, 200);
       $('#more_question').animate({left: 0}, 200,function(){
         $('#more_question').css('position', 'absolute');
+        $(window).animate({scrollTop:scrollval});
       });
       $('#s').css('background-color', 'white');
       $('#a').css('background-color', 'white');
       $('#q').css('background-color', '#ddd');
     }
+    
+ 
+    
   })
   $('#s').click(function() {
    
+    var scrollval = $(window).scrollTop;
     $('#more_answer').css('position', 'fixed');
     $('#more_question').css('position', 'fixed');
     if($('#q').css('background-color', '#ddd')) {
@@ -81,6 +89,7 @@ $(document).ready(function() {
       $('#more_answer').animate({left: "-100vw"}, 200);
       $('#save').animate({left: 0}, 200,function(){
         $('#save').css('position', 'absolute');
+        $(window).animate({scrollTop:scrollval});
       });
       $('#q').css('background-color', 'white');
       $('#a').css('background-color', 'white');
@@ -91,6 +100,7 @@ $(document).ready(function() {
       $('#more_question').animate({left: "-100vw"}, 200);
       $('#save').animate({left: 0}, 200, function(){
         $('#save').css('position', 'absolute');
+        $(window).animate({scrollTop:scrollval});
       });
       $('#a').css('background-color', 'white');
       $('#q').css('background-color', 'white');
@@ -98,26 +108,28 @@ $(document).ready(function() {
     }
   })
   $('#more_question').on('swipeleft', function(){
-
+    var scrollval = $(window).scrollTop;
     $('#more_question').css('position', 'fixed');
     $('#save').css('position', 'fixed');
     $('#more_question').animate({left: "-100vw"}, 200);
     $('#more_answer').animate({left: 0}, 200);
     $('#save').animate({left: "100vw"}, 200,function(){
       $('#more_answer').css('position', 'absolute');
+      $(window).animate({scrollTop:scrollval});
     });
     $('#q').css('background-color', 'white');
     $('#s').css('background-color', 'white');
     $('#a').css('background-color', '#ddd');
   })
   $('#more_answer').on('swipeleft', function(){
-  
+    var scrollval = $(window).scrollTop;
     $('#more_answer').css('position', 'fixed');
     $('#more_question').css('position', 'fixed');
     $('#more_answer').animate({left: "-100vw"}, 200);
     $('#more_question').animate({left: "-100vw"}, 200);
     $('#save').animate({left: 0}, 200,function(){
       $('#save').css('position', 'absolute');
+      $(window).animate({scrollTop:scrollval});
     });
    
     $('#a').css('background-color', 'white');
@@ -126,22 +138,28 @@ $(document).ready(function() {
 
   })
   $('#more_answer').on('swiperight', function(){
+    var scrollval = $(window).scrollTop;
     $('#more_question').css('position', 'absolute');
     $('#more_answer').css('position', 'fixed');
     $('#save').css('position', 'fixed');
     $('#save').animate({left: "100vw"}, 200);
     $('#more_answer').animate({left: "100vw"}, 200);
-    $('#more_question').animate({left: 0}, 200);
+    $('#more_question').animate({left: 0}, 200, function(){
+      $(window).animate({scrollTop:scrollval});
+    });
     $('#a').css('background-color', 'white');
     $('#s').css('background-color', 'white');
     $('#q').css('background-color', '#ddd');
   })
   $('#save').on('swiperight', function(){
+    var scrollval = $(window).scrollTop;
     $('#more_answer').css('position', 'absolute');
     $('#more_question').css('position', 'fixed');
     $('#save').css('position', 'fixed');
     $('#save').animate({left: "100vw"}, 200);
-    $('#more_answer').animate({left: 0}, 200);
+    $('#more_answer').animate({left: 0}, 200, function(){
+      $(window).animate({scrollTop:scrollval});
+    });
     $('#more_question').animate({left: "-100vw"}, 200);
     $('#q').css('background-color', 'white');
     $('#s').css('background-color', 'white');
