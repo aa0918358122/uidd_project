@@ -233,6 +233,11 @@ $(document).ready(function() {
       })
     }
   })
+  $('.cap').click(function() {
+    $('#question').hide()
+    $('#dropdown, #search, #more_answer').show()
+  })
+
 });
 
 var octopus = document.getElementById('octopus');
