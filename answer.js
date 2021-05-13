@@ -25,6 +25,8 @@ $(document).ready(function() {
     $('#answer .content').toggleClass('content_back', true);
     $('#answer .more').show();
   })
+  $('.ui.rating')
+    .rating()
 });
 
 var tiger = document.getElementById('tiger');
@@ -83,50 +85,3 @@ var animItem = bodymovin.loadAnimation({
   path: 'https://assets3.lottiefiles.com/packages/lf20_zezidsfk.json'
 });
 
-$("#Tiger").hover(function() {
-  $("#tiger").css("opacity", "0.5");
-  $("#Tiger span").show();
-}, function() {
-  $("#tiger").css("opacity", "1.0");
-  $("#Tiger span").hide();
-});
-
-$("#Panda").hover(function() {
-  $("#panda").css("opacity", "0.5");
-  $("#Panda span").show();
-}, function() {
-  $("#panda").css("opacity", "1.0");
-  $("#Panda span").hide();
-});
-
-$("#Monkey").hover(function() {
-  $("#monkey").css("opacity", "0.5");
-  $("#Monkey span").show();
-}, function() {
-  $("#monkey").css("opacity", "1.0");
-  $("#Monkey span").hide();
-});
-
-$("#Dog").hover(function() {
-  $("#dog").css("opacity", "0.5");
-  $("#Dog span").show();
-}, function() {
-  $("#dog").css("opacity", "1.0");
-  $("#Dog span").hide();
-});
-
-$("#Platypus").hover(function() {
-  $("#platypus").css("opacity", "0.5");
-  $("#Platypus span").show();
-}, function() {
-  $("#platypus").css("opacity", "1.0");
-  $("#Platypus span").hide();
-});
-
-$("#Otter").hover(function() {
-  $("#otter").css("opacity", "0.5");
-  $("#Otter span").show();
-}, function() {
-  $("#otter").css("opacity", "1.0");
-  $("#Otter span").hide();
-});

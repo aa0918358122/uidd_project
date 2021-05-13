@@ -1,0 +1,134 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.page {
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  display: block;
+  background-color: #FFD4E8;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 7vh;
+  color: white;
+  box-sizing: border-box;
+  padding: 5vh;
+  margin: 0;
+}
+
+.content {
+  text-align: center;
+  font-size: 5vh;
+  color: white;
+  box-sizing: border-box;
+  padding: 0 8vw;
+}
+
+#subpage {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  height: 55vh;
+}
+
+.circle {
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  background-color: #DFE4F0;
+  display: inline-block;
+  margin: 0 6vw 3vh 6vw;
+  position: relative;
+}
+
+.hover_text {
+  z-index: 3;
+  font-size: 5vh;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding-top: 8vh;
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  display: none;
+}
+
+.intro_page {
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #7874CD;
+  position: fixed;
+  left: 100vw;
+  top: 0;
+  box-sizing: border-box;
+  padding: 5vh 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 6;
+}
+
+.circle_picture {
+  width: 30vh;
+  height: 30vh;
+  overflow: hidden;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.circle_picture img {
+  width: 30vh;
+  height: auto;
+}
+
+.name {
+  font-size: 4vh;
+  font-weight: bold;
+  color: white;
+  box-sizing: border-box;
+}
+
+.text {
+  font-size: 3vh;
+  color: white;
+  box-sizing: border-box;
+  padding: 0 5vw;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.back {
+  font-size: 3vh;
+  padding: 1vh 2vw;
+  font-weight: bold;
+  margin-left: 5vw;
+}
+
+#return {
+  border: 0.3vh solid #7874CD;
+  border-radius: 50%;
+  width: 5vh;
+  height: 5vh;
+  color: #7874CD;
+  font-size: 4vh;
+  text-align: center;
+  z-index: 5;
+  position: absolute;
+  top: 6.5vh;
+  left: 3vh;
+  transform: rotateY(180deg);
+  background-color: white;
+}

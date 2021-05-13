@@ -5,71 +5,67 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title> Question </title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link href="./answer.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
 
     <div id="title" class="flex">
+      <div id="circle" class="flex borderbox bold"> ➜ </div>
+      <span class="word bold"> Question </span>
       <div id="octopus"></div>
-      <span class="word"> Question </span>
-      <div id="circle" class="flex borderbox"> ➜ </div>
     </div>
 
     <div id="question" class="flex borderbox">
       <div class="two flex">
         <div class="circle borderbox"> <div id="dog"></div> </div>
-        <button class="follow borderbox"> follow </button>
+        <button class="follow borderbox bold"> follow </button>
         <div class="extra"></div>
       </div>
-      <span class="cap" style="margin-top: 4vh"> Q </span>
+      <span class="cap bold"> Q </span>
       <div class="two" style="margin-right: 3vw">
-        <span class="topic"> What is 2+2+2? </span>
-        <div class="content"> I'm trying to make this calculation but I don't know the answer. Can you help me find the solution? To appreciate England's earliest Gothic buildings and art - the great cathedrals at Canterbury, Lincoln, Salisbury, and Wells and contemporary Gothic texts and images - it is necessary to understand the religious and ethical ideals of the individuals and communities who sponsored them. Paul Binski's fascinating new book offers a radical new perspective on English art, architecture, social formation, and religious imagination during this pivotal period. Binski reveals that the Church, although authoritarian and undergoing reform, was able to come to terms with new developments in society and technology as well as with the fact of social and religious diversity. He explains how varying ideals of personal sanctity were bound up with radical new notions of leadership, personal ethics, and styles of religious devotion and how ideas of reform of worship, personal conduct, and art impacted on the community at large. 
-          <span class="close"> close </span>
+        <span class="topic bold"> What is 2+2+2? </span>
+        <div class="content extra"> I'm trying to make this calculation but I don't know the answer. Can you help me find the solution? To appreciate England's earliest Gothic buildings and art - the great cathedrals at Canterbury, Lincoln, Salisbury, and Wells and contemporary Gothic texts and images - it is necessary to understand the religious and ethical ideals of the individuals and communities who sponsored them. Paul Binski's fascinating new book offers a radical new perspective on English art, architecture, social formation, and religious imagination during this pivotal period. Binski reveals that the Church, although authoritarian and undergoing reform, was able to come to terms with new developments in society and technology as well as with the fact of social and religious diversity. He explains how varying ideals of personal sanctity were bound up with radical new notions of leadership, personal ethics, and styles of religious devotion and how ideas of reform of worship, personal conduct, and art impacted on the community at large. 
+          <span class="close bold"> close </span>
         </div>
-        <span class="more"> read more </span>
+        <span class="more bold"> read more </span>
       </div>
     </div>
 
     <div id="answer" class="flex borderbox">
       <div class="two" style="margin: 0 3vw">
         <div class="one flex">
-          <span class="cap_a"> A </span>
-          <span class="topic_a"> Best answer </span>
+          <span class="topic_a bold"> Best </span>
+          <span class="cap_a bold"> A </span>
           <div class="ratings">
             <div class="empty_star">★★★★★</div>
             <div class="full_star">★★★★★</div>
           </div>
         </div>
-        <span class="topic"> It's six.</span>
-        <div class="content"> To appreciate England's earliest Gothic buildings and art - the great cathedrals at Canterbury, Lincoln, Salisbury, and Wells and contemporary Gothic texts and images - it is necessary to understand the religious and ethical ideals of the individuals and communities who sponsored them. Paul Binski's fascinating new book offers a radical new perspective on English art, architecture, social formation, and religious imagination during this pivotal period. Binski reveals that the Church, although authoritarian and undergoing reform, was able to come to terms with new developments in society and technology as well as with the fact of social and religious diversity. He explains how varying ideals of personal sanctity were bound up with radical new notions of leadership, personal ethics, and styles of religious devotion and how ideas of reform of worship, personal conduct, and art impacted on the community at large. 
-          <span class="close"> close </span>
+        <span class="topic bold"> It's six.</span>
+        <div class="content extra"> To appreciate England's earliest Gothic buildings and art - the great cathedrals at Canterbury, Lincoln, Salisbury, and Wells and contemporary Gothic texts and images - it is necessary to understand the religious and ethical ideals of the individuals and communities who sponsored them. Paul Binski's fascinating new book offers a radical new perspective on English art, architecture, social formation, and religious imagination during this pivotal period. Binski reveals that the Church, although authoritarian and undergoing reform, was able to come to terms with new developments in society and technology as well as with the fact of social and religious diversity. He explains how varying ideals of personal sanctity were bound up with radical new notions of leadership, personal ethics, and styles of religious devotion and how ideas of reform of worship, personal conduct, and art impacted on the community at large. 
+          <span class="close bold"> close </span>
         </div>
-        <span class="more"> read more </span>
+        <span class="more bold"> read more </span>
       </div>
       <div class="two flex">
         <div class="circle borderbox"> <div id="platypus"></div> </div>
-        <button class="follow borderbox"> follow </button>
+        <button class="follow borderbox bold"> follow </button>
         <div class="extra"></div>
       </div>
     </div>
 
     <div id="more_answer" class="flex borderbox">
-      <span class="topic"> More answers </span>
-      <div class="ans borderbox"> You can try adding 4+2... </div>
-      <div class="ans borderbox"> You can try dividing 12 with 2... </div>
-      <div class="ans borderbox"> You can try adding 4+2... </div>
-      <div class="ans borderbox"> You can try dividing 12 with 2... </div>
-      <div class="ans borderbox"> You can try adding 4+2... </div>
-      <div class="ans borderbox"> You can try dividing 12 with 2... </div>
-      <div class="ans borderbox"> You can try ... </div>
-      <button class="add_answer borderbox"> Answer+ </button>
+      <span class="topic bold"> More answers </span>
+      <div class="ans borderbox"> You can try adding 4+2 or adding 2+4, or even you can just multiply 2 by 3 then you can get the answer easily.<div class="ui rating" data-rating="0" data-max-rating="5"></div></div>
+      <div class="ans borderbox"> You can try dividing 12 with 2... <div class="ui rating" data-rating="0" data-max-rating="5"></div></div>
+      <div class="ans borderbox"> You can try ... <div class="ui rating" data-rating="0" data-max-rating="5"></div></div>
+      <button class="add_answer borderbox bold"> Answer+ </button>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
     <script src="./answer.js"></script>
 
   </body>
