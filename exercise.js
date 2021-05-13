@@ -30,6 +30,7 @@ $(document).ready(function() {
   $('#select_two')
     .dropdown()
 
+  $('#more_answer').empty()
   $.post('./list_physics', {}, (data) => {
     data.forEach((element) => {
       $('#more_answer').append('<div class="ans borderbox">' + element + '<span class="open"> open </span> </div>')
@@ -85,6 +86,17 @@ $(document).ready(function() {
     }
   });
 
+  $('#detail_form button[type="submit"]').click((event) => {
+    $('#detail_box').animate({bottom: '-45vh'}, 500);
+    var title = $('#title_form input').val();
+    var detail = $('#detail_form input').val();
+    event.preventDefault()
+    $.post('./add_physics', {
+      mark: $('#title_form input[name=mark]').val(),
+      detail: $('#detail_form input[name=detail]').val()
+    })
+  })
+
   $('#select_two').on('change', function() {
     var value = $(this).val();
     $('#detail_form button[type="submit"]').click((event) => {
@@ -120,7 +132,7 @@ $(document).ready(function() {
           detail: $('#detail_form input[name=detail]').val()
         })
       }
-      else if (value == "electromagnetics") {
+      else {
         event.preventDefault()
         $.post('./add_electromagnetics', {
           mark: $('#title_form input[name=mark]').val(),
@@ -129,10 +141,14 @@ $(document).ready(function() {
       }
     })
   })
+
   $('#question, #button').hide()
   $('#more_answer').on('click', '.ans', function() {
     $('#dropdown, #search, #more_answer').hide()
     $('#question, #button').show()
+    $('.word').remove()
+    $('#circle_no').remove()
+    $('#title').prepend(`<div id="circle" class="flex borderbox bold"> ➜ </div>` + `<span class="word"> Answer </span>`)
     var ansElement = $(this).text()
     ansElement = ansElement.substr(0, ansElement.length - 7)
     $.post('./search_physics', {
@@ -140,17 +156,31 @@ $(document).ready(function() {
     }, (data) => {
         $('.topic, .content').empty()
         $('.topic').append(ansElement)
-        $('.content').append(data + `<span class="close bold"> close </span>`)
-        $('#question .more').show()
-        $('#question .close').show()
+        $('.content').append(data)
+        console.log($('.content').height())
+        console.log(window.innerHeight)
+        if ($('.content').height() >= 76) {
+          $('.content').append(`<span class="close bold"> close </span>`)
+          $('#question .more').show()
+          $('#question .close').show()
+        }
+        else {
+          $('#question .more').hide()
+          $('#question .close').hide()
+        }
     })
   })
+
   $('#select').on('change', function() {
     var value = $(this).val();
     if (value == "physics") {
       $('#more_answer').on('click', '.ans', function() {
         $('#dropdown, #search, #more_answer').hide()
         $('#question, #button').show()
+        $('.word').remove()
+        $('#circle_no').remove()
+        $('#circle').remove()
+        $('#title').prepend(`<div id="circle" class="flex borderbox bold"> ➜ </div>` + `<span class="word"> Answer </span>`)
         var ansElement = $(this).text()
         ansElement = ansElement.substr(0, ansElement.length - 7)
         $.post('./search_physics', {
@@ -158,9 +188,16 @@ $(document).ready(function() {
         }, (data) => {
             $('.topic, .content').empty()
             $('.topic').append(ansElement)
-            $('.content').append(data + `<span class="close bold"> close </span>`)
-            $('#question .more').show()
-            $('#question .close').show()
+            $('.content').append(data)
+            if ($('.content').height() >= 76) {
+              $('.content').append(`<span class="close bold"> close </span>`)
+              $('#question .more').show()
+              $('#question .close').show()
+            }
+            else {
+              $('#question .more').hide()
+              $('#question .close').hide()
+            }
         })
       })
     }
@@ -168,6 +205,10 @@ $(document).ready(function() {
       $('#more_answer').on('click', '.ans', function() {
         $('#dropdown, #search, #more_answer').hide()
         $('#question, #button').show()
+        $('.word').remove()
+        $('#circle_no').remove()
+        $('#circle').remove()
+        $('#title').prepend(`<div id="circle" class="flex borderbox bold"> ➜ </div>` + `<span class="word"> Answer </span>`)
         var ansElement = $(this).text()
         ansElement = ansElement.substr(0, ansElement.length - 7)
         $.post('./search_calculus', {
@@ -175,9 +216,16 @@ $(document).ready(function() {
         }, (data) => {
             $('.topic, .content').empty()
             $('.topic').append(ansElement)
-            $('.content').append(data + `<span class="close bold"> close </span>`)
-            $('#question .more').show()
-            $('#question .close').show()
+            $('.content').append(data)
+            if ($('.content').height() >= 76) {
+              $('.content').append(`<span class="close bold"> close </span>`)
+              $('#question .more').show()
+              $('#question .close').show()
+            }
+            else {
+              $('#question .more').hide()
+              $('#question .close').hide()
+            }
         })
       })
     }
@@ -185,6 +233,10 @@ $(document).ready(function() {
       $('#more_answer').on('click', '.ans', function() {
         $('#dropdown, #search, #more_answer').hide()
         $('#question, #button').show()
+        $('.word').remove()
+        $('#circle_no').remove()
+        $('#circle').remove()
+        $('#title').prepend(`<div id="circle" class="flex borderbox bold"> ➜ </div>` + `<span class="word"> Answer </span>`)
         var ansElement = $(this).text()
         ansElement = ansElement.substr(0, ansElement.length - 7)
         $.post('./search_linear', {
@@ -192,9 +244,16 @@ $(document).ready(function() {
         }, (data) => {
             $('.topic, .content').empty()
             $('.topic').append(ansElement)
-            $('.content').append(data + `<span class="close bold"> close </span>`)
-            $('#question .more').show()
-            $('#question .close').show()
+            $('.content').append(data)
+            if ($('.content').height() >= 76) {
+              $('.content').append(`<span class="close bold"> close </span>`)
+              $('#question .more').show()
+              $('#question .close').show()
+            }
+            else {
+              $('#question .more').hide()
+              $('#question .close').hide()
+            }
         })
       })
     }
@@ -202,6 +261,10 @@ $(document).ready(function() {
       $('#more_answer').on('click', '.ans', function() {
         $('#dropdown, #search, #more_answer').hide()
         $('#question, #button').show()
+        $('.word').remove()
+        $('#circle_no').remove()
+        $('#circle').remove()
+        $('#title').prepend(`<div id="circle" class="flex borderbox bold"> ➜ </div>` + `<span class="word"> Answer </span>`)
         var ansElement = $(this).text()
         ansElement = ansElement.substr(0, ansElement.length - 7)
         $.post('./search_electronics', {
@@ -209,9 +272,16 @@ $(document).ready(function() {
         }, (data) => {
             $('.topic, .content').empty()
             $('.topic').append(ansElement)
-            $('.content').append(data + `<span class="close bold"> close </span>`)
-            $('#question .more').show()
-            $('#question .close').show()
+            $('.content').append(data)
+            if ($('.content').height() >= 76) {
+              $('.content').append(`<span class="close bold"> close </span>`)
+              $('#question .more').show()
+              $('#question .close').show()
+            }
+            else {
+              $('#question .more').hide()
+              $('#question .close').hide()
+            }
         })
       })
     }
@@ -219,6 +289,10 @@ $(document).ready(function() {
       $('#more_answer').on('click', '.ans', function() {
         $('#dropdown, #search, #more_answer').hide()
         $('#question, #button').show()
+        $('.word').remove()
+        $('#circle_no').remove()
+        $('#circle').remove()
+        $('#title').prepend(`<div id="circle" class="flex borderbox bold"> ➜ </div>` + `<span class="word"> Answer </span>`)
         var ansElement = $(this).text()
         ansElement = ansElement.substr(0, ansElement.length - 7)
         $.post('./search_electromagnetics', {
@@ -226,16 +300,28 @@ $(document).ready(function() {
         }, (data) => {
             $('.topic, .content').empty()
             $('.topic').append(ansElement)
-            $('.content').append(data + `<span class="close bold"> close </span>`)
-            $('#question .more').show()
-            $('#question .close').show()
+            $('.content').append(data)
+            if ($('.content').height() >= 76) {
+              $('.content').append(`<span class="close bold"> close </span>`)
+              $('#question .more').show()
+              $('#question .close').show()
+            }
+            else {
+              $('#question .more').hide()
+              $('#question .close').hide()
+            }
         })
       })
     }
   })
-  $('.cap').click(function() {
-    $('#question').hide()
+  $('#title').on('click', '#circle', function() {
+    $('#question, #button').hide()
     $('#dropdown, #search, #more_answer').show()
+    $('#question .content').toggleClass('content_transform', false);
+    $('#question .content').toggleClass('content_back', true);
+    $('.word').remove()
+    $('#circle').remove()
+    $('#title').append(`<span class="word"> Question </span>` + `<div id="circle_no" class="flex borderbox"></div>`)
   })
 
 });
