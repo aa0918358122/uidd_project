@@ -157,8 +157,6 @@ $(document).ready(function() {
         $('.topic, .content').empty()
         $('.topic').append(ansElement)
         $('.content').append(data)
-        console.log($('.content').height())
-        console.log(window.innerHeight)
         if ($('.content').height() >= 76) {
           $('.content').append(`<span class="close bold"> close </span>`)
           $('#question .more').show()
