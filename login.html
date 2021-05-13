@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <title> Login </title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        
+        <link href="./login.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <script src="id.js"></script>
+        <div class="wrapper flex">
+            <div id="octopus"></div>
+            <div id="banner" class="flex">
+                <p class="title flex">解惑平台<p class="title flex">Learn Together</p>
+            </div>
+            <div id="animalwrap">
+                <div class="animal"><div id="cat"></div></div>
+                <div class="animal"><div id="panda"></div></div>
+                <div class="animal"><div id="platypus"></div></div>
+                <div class="animal"><div id="dog"></div></div>
+                <div class="animal"><div id="tiger"></div></div>
+                <div class="animal"><div id="monkey"></div></div>
+            </div>
+            <fb:login-button id="login_button" scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+            <div id="status"></div>
+        </div>
+        
+
+
+
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <script src="./login.js"></script>
+</html>

@@ -1,0 +1,62 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.flex{
+    display: flex;
+}
+.wrapper{
+    width: 100%;
+    background-color: rgb(216, 232, 255);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#octopus{
+    position: relative;
+    width: min(300px,60vw);
+ 
+}
+#banner{
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    
+  
+}
+.title{
+    font-size: max(3vw, 36px);
+    font-weight: bold;
+    color: rgb(141, 79, 199);
+    justify-content: center;
+    margin: 0;
+}
+#animalwrap{
+    position: relative;
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.animal{
+    display: inline-flex;
+    width:min(200px,15vw);
+    height: min(200px,15vw);
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    margin: 1vw; 
+}
+#status{
+    font-size: max(1vw, 20px);
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+#login_button{
+    width:min(100px, 20vw);
+
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title> Question </title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.5.0-rc1/jquery.mobile-1.5.0-rc1.js" integrity="sha256-ozaZ7ZptnEEuLpoEojfxBjOKXHoaQUb/DLnsTUEkIfs=" crossorigin="anonymous"></script>
+    <link href="./profile.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+
+    <div id="title" class="flex">
+      <div id="octopus"></div>
+      <span class="word"> Profile </span>
+      <div id="circle" class="flex borderbox"> ≡ </div>
+    </div>
+
+    <div id="intro" class="flex borderbox">
+      <span class="name"> Cathy McMouse </span>
+      <span class="point"> 350 points </span>
+      <div class="circle"> <div id="cat"></div> </div>
+    </div>
+
+    <div id="switch" class="flex borderbox">
+      <div id="q" class="choose borderbox"> My Questions </div>
+      <div id="a" class="choose borderbox"> My Answers </div>
+      <div id="s" class="choose borderbox"> Saved Posts </div>
+    </div>
+
+    <div id="more_question" class="flex borderbox">
+      <% for(var i = 0; i < questions.length; i++) { %>
+        <div class="ans borderbox"><%-questions[i] %>
+          <span class="open"> open </span>
+          <span class="solved pos"> +500 </span>
+        </div>
+      <% } %>  
+      <!-- <div class="ans borderbox"> Random Process and LTI system
+        <span class="open"> open </span>
+        <span class="solved pos"> -150 </span>
+      </div>
+      <div class="ans borderbox"> Properties of the autocorrelation
+        <span class="open"> open </span>
+        <span class="solved pos"> -150 </span>
+      </div>
+      <div class="ans borderbox"> Time Averages
+        <span class="solved"> solved </span>
+        <span class="solved pos"> -150 </span>
+      </div>
+      <div class="ans borderbox"> Random Process and LTI system
+        <span class="open"> open </span>
+        <span class="solved pos"> -150 </span>
+      </div>
+      <div class="ans borderbox"> Properties of the autocorrelation
+        <span class="open"> open </span>
+        <span class="solved pos"> -150 </span>
+      </div>
+      <div class="ans borderbox"> Time Averages
+        <span class="solved"> solved </span>
+        <span class="solved pos"> -150 </span>
+      </div>
+      <div class="ans borderbox"> Random Process and LTI system
+        <span class="open"> open </span>
+        <span class="solved pos"> -150 </span>
+      </div>
+      <div class="ans borderbox"> Properties of the autocorrelation
+        <span class="open"> open </span>
+        <span class="solved pos"> -150 </span>
+      </div>
+      <div class="ans borderbox"> Time Averages
+        <span class="solved"> solved </span>
+        <span class="solved pos"> -150 </span>
+      </div>
+      <div style="height: 7vh"></div> -->
+    </div>
+
+    <div id="more_answer" class="flex borderbox">
+      <% for(var i = 0; i < questions.length; i++) { %>
+        <div class="ans borderbox"><%-questions[i] %>
+          <span class="open"> open </span>
+          <span class="solved pos"> +500 </span>
+        </div>
+      <% } %>  
+      <!-- <div class="ans borderbox"> Random Process and LTI system
+        <span class="open"> open </span>
+        <span class="solved pos"> +500 </span>
+      </div>
+      <div class="ans borderbox"> Time Averages
+        <span class="solved"> solved </span>
+        <span class="solved pos"> +500 </span>
+      </div>
+      <div class="ans borderbox"> Properties of the autocorrelation
+        <span class="open"> open </span>
+        <span class="solved pos"> +500 </span>
+      </div>
+      <div class="ans borderbox"> Random Process and LTI system
+        <span class="open"> open </span>
+        <span class="solved pos"> +500 </span>
+      </div>
+      <div class="ans borderbox"> Time Averages
+        <span class="solved"> solved </span>
+        <span class="solved pos"> +500 </span>
+      </div>
+      <div class="ans borderbox"> Properties of the autocorrelation
+        <span class="open"> open </span>
+        <span class="solved pos"> +500 </span>
+      </div>
+      <div style="height: 7vh"></div> -->
+    </div>
+
+    <div id="save" class="flex borderbox">
+      <% for(var i = 0; i < questions.length; i++) { %>
+        <div class="ans borderbox"><%-questions[i] %>
+          <span class="open"> open </span>
+          <span class="solved pos"> +500 </span>
+        </div>
+      <% } %>  
+      <!-- <div class="ans borderbox"> Random Process and LTI system
+        <span class="open"> open </span>
+      </div>
+      <div class="ans borderbox"> Time Averages
+        <span class="solved"> solved </span>
+      </div>
+      <div class="ans borderbox"> Properties of the autocorrelation
+        <span class="open"> open </span>
+      </div>
+      <div class="ans borderbox"> Random Process and LTI system
+        <span class="open"> open </span>
+      </div>
+      <div class="ans borderbox"> Time Averages
+        <span class="solved"> solved </span>
+      </div>
+      <div class="ans borderbox"> Properties of the autocorrelation
+        <span class="open"> open </span>
+      </div>
+      <div class="ans borderbox"> Random Process and LTI system
+        <span class="open"> open </span>
+      </div>
+      <div class="ans borderbox"> Time Averages
+        <span class="solved"> solved </span>
+      </div>
+      <div class="ans borderbox"> Properties of the autocorrelation
+        <span class="open"> open </span>
+      </div>
+      <div style="height: 7vh"></div> -->
+    </div>
+
+
+    <div id="down" class="flex borderbox">
+      <span class="down_button"> Question </span>
+      <div id="add_out" class="borderbox">
+        <div id="add_in" class="borderbox">
+          <div class="cross"> + </div>
+        </div>
+      </div>
+      <span class="down_button"> Profile </span>
+    </div>
+
+
+    <div id="button_page" class="flex borderbox">
+      <div id="return"> ➜ </div>
+      <button class="button borderbox"> Settings </button>
+      <button class="button borderbox"> About </button>
+      <button class="button borderbox"> Log out </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <script src="./profile.js"></script>
+
+  </body>
+
+</html>
+
